@@ -25,7 +25,7 @@ public class UserRestontroller {
     @GetMapping("/details")
     public UserDto details(){
         UserDto userDto = new UserDto();
-        User user = new User("Andres", "Cid");
+        User user = new User("Andres", "Cid", null);
         userDto.setUser(user.getName());
         userDto.setLastname(user.getLastname());
         userDto.setTitle("Hola Mundo soy SpringBoot");
@@ -41,9 +41,9 @@ public class UserRestontroller {
     @GetMapping("/list")
    
     public List<User> list(){
-        User user1 = new User("Andres","Cid");
-        User user2 = new User("Santiago","Hernandez");
-        User user3 = new User("Mireia","Sopena");
+        User user1 = new User("Andres","Cid", null);
+        User user2 = new User("Santiago","Hernandez", null);
+        User user3 = new User("Mireia","Sopena", null);
 
         List<User> users = new ArrayList<>();
         User[] userArray = {user1, user2, user3};
@@ -56,7 +56,7 @@ public class UserRestontroller {
     @GetMapping("/map")
     public Map<String,Object> MapDetails(){
             
-        User user = new User("Andres", "Cid");
+        User user = new User("Andres", "Cid", null);
         Map<String,Object> body = new HashMap<>();
         body.put("title","Hola Mundo soy SpringBoot");
         body.put("user",user);

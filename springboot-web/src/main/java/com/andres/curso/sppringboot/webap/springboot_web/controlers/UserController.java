@@ -41,7 +41,7 @@ public class UserController {
     @ModelAttribute("users")
     public List<User> usersModel(){
         List<User> users = Arrays.asList(new User("Andres","Cid","andresin@gmail.com"),
-        new User("Santiago","Hernandez"),
+        new User("Santiago","Hernandez", null),
         new User("Mireia","Sopena","msop@hotmail.com"));
         return users;
     }
